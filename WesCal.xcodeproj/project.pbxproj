@@ -7,13 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C525D8C146B8D2400D360FD /* HtmlParserTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C525D88146B8D2400D360FD /* HtmlParserTestViewController.m */; };
+		8C525D8D146B8D2400D360FD /* HtmlParserTestAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C525D8B146B8D2400D360FD /* HtmlParserTestAppDelegate.m */; };
+		8C525D94146B8D3C00D360FD /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C525D8F146B8D3C00D360FD /* TFHpple.m */; };
+		8C525D95146B8D3C00D360FD /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C525D91146B8D3C00D360FD /* TFHppleElement.m */; };
+		8C525D96146B8D3C00D360FD /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C525D93146B8D3C00D360FD /* XPathQuery.m */; };
+		8C525D99146B8E1000D360FD /* SecondTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C525D98146B8E1000D360FD /* SecondTableView.m */; };
+		8C525D9B146C16F100D360FD /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C525D9A146C16F100D360FD /* libxml2.2.dylib */; };
+		8C525D9D146C173200D360FD /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C525D9C146C173200D360FD /* libxml2.dylib */; };
 		8CB8DD6B146B55AE00505510 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CB8DD6A146B55AE00505510 /* UIKit.framework */; };
 		8CB8DD6D146B55AE00505510 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CB8DD6C146B55AE00505510 /* Foundation.framework */; };
 		8CB8DD73146B55AE00505510 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8CB8DD71146B55AE00505510 /* InfoPlist.strings */; };
 		8CB8DD75146B55AE00505510 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB8DD74146B55AE00505510 /* main.m */; };
 		8CB8DD79146B55AE00505510 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB8DD78146B55AE00505510 /* AppDelegate.m */; };
 		8CB8DD7C146B55AE00505510 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CB8DD7A146B55AE00505510 /* MainStoryboard_iPhone.storyboard */; };
-		8CB8DD7F146B55AE00505510 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CB8DD7D146B55AE00505510 /* MainStoryboard_iPad.storyboard */; };
 		8CB8DD82146B55AE00505510 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB8DD81146B55AE00505510 /* MasterViewController.m */; };
 		8CB8DD85146B55AE00505510 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB8DD84146B55AE00505510 /* DetailViewController.m */; };
 		8CB8DD8D146B55AE00505510 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CB8DD8C146B55AE00505510 /* SenTestingKit.framework */; };
@@ -21,6 +28,7 @@
 		8CB8DD8F146B55AE00505510 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CB8DD6C146B55AE00505510 /* Foundation.framework */; };
 		8CB8DD97146B55AE00505510 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8CB8DD95146B55AE00505510 /* InfoPlist.strings */; };
 		8CB8DD9A146B55AE00505510 /* WesCalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB8DD99146B55AE00505510 /* WesCalTests.m */; };
+		8CB8DDA5146B5A2A00505510 /* Events.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB8DDA4146B5A2A00505510 /* Events.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,27 +42,42 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8C525D88146B8D2400D360FD /* HtmlParserTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HtmlParserTestViewController.m; sourceTree = "<group>"; };
+		8C525D89146B8D2400D360FD /* HtmlParserTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HtmlParserTestViewController.h; sourceTree = "<group>"; };
+		8C525D8A146B8D2400D360FD /* HtmlParserTestAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HtmlParserTestAppDelegate.h; sourceTree = "<group>"; };
+		8C525D8B146B8D2400D360FD /* HtmlParserTestAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HtmlParserTestAppDelegate.m; sourceTree = "<group>"; };
+		8C525D8E146B8D3C00D360FD /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
+		8C525D8F146B8D3C00D360FD /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = "<group>"; };
+		8C525D90146B8D3C00D360FD /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHppleElement.h; sourceTree = "<group>"; };
+		8C525D91146B8D3C00D360FD /* TFHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleElement.m; sourceTree = "<group>"; };
+		8C525D92146B8D3C00D360FD /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
+		8C525D93146B8D3C00D360FD /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
+		8C525D97146B8E1000D360FD /* SecondTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondTableView.h; sourceTree = "<group>"; };
+		8C525D98146B8E1000D360FD /* SecondTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondTableView.m; sourceTree = "<group>"; };
+		8C525D9A146C16F100D360FD /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
+		8C525D9C146C173200D360FD /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		8CB8DD66146B55AE00505510 /* WesCal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WesCal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CB8DD6A146B55AE00505510 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8CB8DD6C146B55AE00505510 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		8CB8DD70146B55AE00505510 /* WesCal-Info.plist */ = {isa = PBXFileReference; path = "WesCal-Info.plist"; sourceTree = "<group>"; };
+		8CB8DD70146B55AE00505510 /* WesCal-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WesCal-Info.plist"; sourceTree = "<group>"; };
 		8CB8DD72146B55AE00505510 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8CB8DD74146B55AE00505510 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		8CB8DD76146B55AE00505510 /* WesCal-Prefix.pch */ = {isa = PBXFileReference; path = "WesCal-Prefix.pch"; sourceTree = "<group>"; };
-		8CB8DD77146B55AE00505510 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		8CB8DD76146B55AE00505510 /* WesCal-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WesCal-Prefix.pch"; sourceTree = "<group>"; };
+		8CB8DD77146B55AE00505510 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8CB8DD78146B55AE00505510 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8CB8DD7B146B55AE00505510 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		8CB8DD7E146B55AE00505510 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		8CB8DD80146B55AE00505510 /* MasterViewController.h */ = {isa = PBXFileReference; path = MasterViewController.h; sourceTree = "<group>"; };
+		8CB8DD80146B55AE00505510 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		8CB8DD81146B55AE00505510 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		8CB8DD83146B55AE00505510 /* DetailViewController.h */ = {isa = PBXFileReference; path = DetailViewController.h; sourceTree = "<group>"; };
+		8CB8DD83146B55AE00505510 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		8CB8DD84146B55AE00505510 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		8CB8DD8B146B55AE00505510 /* WesCalTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WesCalTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CB8DD8C146B55AE00505510 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		8CB8DD94146B55AE00505510 /* WesCalTests-Info.plist */ = {isa = PBXFileReference; path = "WesCalTests-Info.plist"; sourceTree = "<group>"; };
+		8CB8DD94146B55AE00505510 /* WesCalTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WesCalTests-Info.plist"; sourceTree = "<group>"; };
 		8CB8DD96146B55AE00505510 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		8CB8DD98146B55AE00505510 /* WesCalTests.h */ = {isa = PBXFileReference; path = WesCalTests.h; sourceTree = "<group>"; };
+		8CB8DD98146B55AE00505510 /* WesCalTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WesCalTests.h; sourceTree = "<group>"; };
 		8CB8DD99146B55AE00505510 /* WesCalTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WesCalTests.m; sourceTree = "<group>"; };
+		8CB8DDA3146B5A2A00505510 /* Events.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Events.h; sourceTree = "<group>"; };
+		8CB8DDA4146B5A2A00505510 /* Events.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Events.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +85,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C525D9D146C173200D360FD /* libxml2.dylib in Frameworks */,
+				8C525D9B146C16F100D360FD /* libxml2.2.dylib in Frameworks */,
 				8CB8DD6B146B55AE00505510 /* UIKit.framework in Frameworks */,
 				8CB8DD6D146B55AE00505510 /* Foundation.framework in Frameworks */,
 			);
@@ -80,9 +105,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C525D87146B8CDA00D360FD /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				8C525D8E146B8D3C00D360FD /* TFHpple.h */,
+				8C525D9A146C16F100D360FD /* libxml2.2.dylib */,
+				8C525D8F146B8D3C00D360FD /* TFHpple.m */,
+				8C525D90146B8D3C00D360FD /* TFHppleElement.h */,
+				8C525D91146B8D3C00D360FD /* TFHppleElement.m */,
+				8C525D92146B8D3C00D360FD /* XPathQuery.h */,
+				8C525D93146B8D3C00D360FD /* XPathQuery.m */,
+				8C525D88146B8D2400D360FD /* HtmlParserTestViewController.m */,
+				8C525D89146B8D2400D360FD /* HtmlParserTestViewController.h */,
+				8C525D8A146B8D2400D360FD /* HtmlParserTestAppDelegate.h */,
+				8C525D8B146B8D2400D360FD /* HtmlParserTestAppDelegate.m */,
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
 		8CB8DD5B146B55AD00505510 = {
 			isa = PBXGroup;
 			children = (
+				8C525D9C146C173200D360FD /* libxml2.dylib */,
 				8CB8DD6E146B55AE00505510 /* WesCal */,
 				8CB8DD92146B55AE00505510 /* WesCalTests */,
 				8CB8DD69146B55AE00505510 /* Frameworks */,
@@ -115,12 +159,16 @@
 				8CB8DD77146B55AE00505510 /* AppDelegate.h */,
 				8CB8DD78146B55AE00505510 /* AppDelegate.m */,
 				8CB8DD7A146B55AE00505510 /* MainStoryboard_iPhone.storyboard */,
-				8CB8DD7D146B55AE00505510 /* MainStoryboard_iPad.storyboard */,
 				8CB8DD80146B55AE00505510 /* MasterViewController.h */,
 				8CB8DD81146B55AE00505510 /* MasterViewController.m */,
 				8CB8DD83146B55AE00505510 /* DetailViewController.h */,
 				8CB8DD84146B55AE00505510 /* DetailViewController.m */,
+				8C525D97146B8E1000D360FD /* SecondTableView.h */,
+				8C525D98146B8E1000D360FD /* SecondTableView.m */,
+				8C525D87146B8CDA00D360FD /* New Group */,
 				8CB8DD6F146B55AE00505510 /* Supporting Files */,
+				8CB8DDA3146B5A2A00505510 /* Events.h */,
+				8CB8DDA4146B5A2A00505510 /* Events.m */,
 			);
 			path = WesCal;
 			sourceTree = "<group>";
@@ -228,7 +276,6 @@
 			files = (
 				8CB8DD73146B55AE00505510 /* InfoPlist.strings in Resources */,
 				8CB8DD7C146B55AE00505510 /* MainStoryboard_iPhone.storyboard in Resources */,
-				8CB8DD7F146B55AE00505510 /* MainStoryboard_iPad.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +314,13 @@
 				8CB8DD79146B55AE00505510 /* AppDelegate.m in Sources */,
 				8CB8DD82146B55AE00505510 /* MasterViewController.m in Sources */,
 				8CB8DD85146B55AE00505510 /* DetailViewController.m in Sources */,
+				8CB8DDA5146B5A2A00505510 /* Events.m in Sources */,
+				8C525D8C146B8D2400D360FD /* HtmlParserTestViewController.m in Sources */,
+				8C525D8D146B8D2400D360FD /* HtmlParserTestAppDelegate.m in Sources */,
+				8C525D94146B8D3C00D360FD /* TFHpple.m in Sources */,
+				8C525D95146B8D3C00D360FD /* TFHppleElement.m in Sources */,
+				8C525D96146B8D3C00D360FD /* XPathQuery.m in Sources */,
+				8C525D99146B8E1000D360FD /* SecondTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,14 +357,6 @@
 				8CB8DD7B146B55AE00505510 /* en */,
 			);
 			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		8CB8DD7D146B55AE00505510 /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8CB8DD7E146B55AE00505510 /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		8CB8DD95146B55AE00505510 /* InfoPlist.strings */ = {
@@ -376,6 +422,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WesCal/WesCal-Prefix.pch";
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = "WesCal/WesCal-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -387,6 +434,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WesCal/WesCal-Prefix.pch";
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = "WesCal/WesCal-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -446,6 +494,7 @@
 				8CB8DD9F146B55AE00505510 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8CB8DDA0146B55AE00505510 /* Build configuration list for PBXNativeTarget "WesCalTests" */ = {
 			isa = XCConfigurationList;
@@ -454,6 +503,7 @@
 				8CB8DDA2146B55AE00505510 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

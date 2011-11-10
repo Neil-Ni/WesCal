@@ -7,12 +7,17 @@
 //
 
 #import "MasterViewController.h"
-
 #import "DetailViewController.h"
+#import "Events.h"
+#import "SecondTableView.h"
 
 @implementation MasterViewController
 
-@synthesize detailViewController = _detailViewController;
+@synthesize MyTableView = _MyTableView;
+@synthesize CFAEvents =_CFAEvents;
+@synthesize WesleyingEvents =_WesleyingEvents;
+@synthesize ListofItems =_ListofItems;
+@synthesize SecondTableView = _SecondTableView;
 
 - (id)initWithCoder:(NSCoder *)coder
 {
@@ -37,8 +42,47 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    //start parsing;
+    
+    
 	// Do any additional setup after loading the view, typically from a nib.
-    self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    //parse the information and add the information into Wesleying.
+    
+    self.ListofItems = [[NSMutableArray alloc]initWithObjects:@"My Calendar",@"All", @"Arts",@"Atheletics",@"Talks",@"Academic Calendar",@"CFA",@"Wesleying", nil];
+    //sectioned academic calendar into section in months
+    
+    
+    //Events *event1= [[Events alloc]initWithEvent:@"WesleyingEvent1" andTime:@"11/23/2011" andTime:@"19:11" andCategory:@"Wesleying"];
+    /*Events *event2= [[Events alloc]initWithEvent:@"CFAEvent1" andTime:@"11/23/2011" andTime:@"20:11" andCategory:@"CFA"];
+    */
+    
+    /*
+    NSMutableArray *WesleyanEventsNameArray = [[NSMutableArray alloc] init];
+    
+    [WesleyanEventsNameArray addObject:event1.EventName];
+    [WesleyanEventsNameArray addObject:event2.EventName];
+    
+    NSDictionary *WesleyanEventsNameDict =[NSDictionary dictionaryWithObject:WesleyanEventsNameArray forKey:@"EventName"];
+    
+    NSMutableArray *WesleyanEventsCategoryArray = [[NSMutableArray alloc] init];
+    
+    [WesleyanEventsCategoryArray addObject:event1.EventCategory];
+    [WesleyanEventsCategoryArray addObject:event2.EventCategory];
+
+    NSDictionary *WesleyanEventsCategoryDict =[NSDictionary dictionaryWithObject:WesleyanEventsCategoryArray forKey:@"Category"];
+    
+    
+    self.WesleyingEvents =[[NSMutableArray alloc] init];
+    [self.WesleyingEvents addObject:WesleyanEventsCategoryDict];
+    [self.WesleyingEvents addObject:WesleyanEventsNameDict];
+    */
+    self.WesleyingEvents =[[NSMutableArray alloc] init];
+    //[self.WesleyingEvents addObject:event1.EventName];
+    
+    
+    
+   // self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         [self.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionMiddle];
     }
@@ -46,6 +90,7 @@
 
 - (void)viewDidUnload
 {
+    [self setMyTableView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -81,50 +126,94 @@
     }
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete)
-    {
-        // Delete the row from the data source.
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [self.ListofItems count];
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *MyIdentifer = @"Cell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifer];
+    
+    if(cell == nil) {
+        cell = [UITableViewCell alloc];
     }
-    else if (editingStyle == UITableViewCellEditingStyleInsert)
-    {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-    }   
+    
+    cell.textLabel.font = [UIFont fontWithName:@"Helvetica Neue Bold" size:14];
+    NSString *Category = [self.ListofItems objectAtIndex:indexPath.row];
+    cell.textLabel.text = Category;
+    
+    return cell;
 }
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here -- for example, create and push another view controller.
+ 
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+   // NSIndexPath *selectedRowIndex = [self.tableView indexPathForSelectedRow];
+
+    
+    SecondTableView *secondTableView = [segue destinationViewController];
+    
+    NSIndexPath *indexPath= [self.tableView indexPathForSelectedRow]; 
+    
+    if([[self.ListofItems objectAtIndex:indexPath.row] isEqual:@"MyCalendar"]){
+           // segue.identifier = @"Calendar"; 
+    }
+    
+    if([[self.ListofItems objectAtIndex:indexPath.row] isEqual:@"All"]){
+        secondTableView.Number = 0;
+        [secondTableView setTitle:[self.ListofItems objectAtIndex:indexPath.row]];
+    }
+    if([[self.ListofItems objectAtIndex:indexPath.row] isEqual:@"Science"]){
+        secondTableView.Number = 1;
+        [secondTableView setTitle:[self.ListofItems objectAtIndex:indexPath.row]];
+        
+    }
+    if([[self.ListofItems objectAtIndex:indexPath.row] isEqual:@"Humanity"]){
+        secondTableView.Number = 2;
+        [secondTableView setTitle:[self.ListofItems objectAtIndex:indexPath.row]];
+        
+    }
+    if([[self.ListofItems objectAtIndex:indexPath.row] isEqual:@"Sports"]){
+        secondTableView.Number = 3;
+        [secondTableView setTitle:[self.ListofItems objectAtIndex:indexPath.row]];
+        
+    }
+    if([[self.ListofItems objectAtIndex:indexPath.row] isEqual:@"Lectures"]){
+        secondTableView.Number = 4;
+        [secondTableView setTitle:[self.ListofItems objectAtIndex:indexPath.row]];
+        
+    }
+    if([[self.ListofItems objectAtIndex:indexPath.row] isEqual:@"CFA"]){
+        secondTableView.Number = 5;
+        [secondTableView setTitle:[self.ListofItems objectAtIndex:indexPath.row]];
+        
+    }
+    if([[self.ListofItems objectAtIndex:indexPath.row] isEqual:@"Wesleying"]){
+        secondTableView.Number = 6;
+        [secondTableView setTitle:[self.ListofItems objectAtIndex:indexPath.row]];
+        
+    }
+    
+   // [self.navigationController pushViewController:secondTableView animated:YES];
+   /* if ([[segue identifier] isEqualToString:@"Events"]) {
+        
+        //NSIndexPath *selectedRowIndex = [self.tableView indexPathForSelectedRow];
+        SecondTableView *secondTableView = [segue destinationViewController];
+        
+     //   secondTableView. =[dataController objectInListAtIndex:selectedRowIndex.row];
+  //      DetailViewController *detailViewController = [segue destinationViewController];
+//        detailViewController.play = [dataController objectInListAtIndex:selectedRowIndex.row];
+    }*/
+}
+
 
 @end
